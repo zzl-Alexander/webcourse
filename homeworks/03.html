@@ -12,64 +12,82 @@
         .contain{
             display: flex;
         }
-        #sidebar{
-            display: flex;
-            width: 200px;
+        .sidebar{
             box-sizing: border-box;
-        }
-        #sidebar ul{
             list-style: none;
             width: 5%;
             height: 25%;
             background-color: deepskyblue;
             position: fixed;
-
         }
-        #sidebar li a{
+        /*.sidebar ul{*/
+        /*    list-style: none;*/
+        /*    width: 5%;*/
+        /*    height: 25%;*/
+        /*    background-color: deepskyblue;*/
+        /*    position: fixed;*/
+
+        /*}*/
+        .sidebar li a{
             display: block;
+        }
 
-            padding: 0;
-        }
-        .ll{
-            display: flex;
-        }
         .item{
             display: flex;
             justify-content: center;
         }
-        i{
-            font-size: 100px;
-            color: white;
-        }
+
         .material-icons{
+            color: white;
             font-size: 30px;
             position: center;
+            transition: 0.5s;
+        }
+        .material-icons:hover{
+            transition: 0.5s;
+
+            transform: translate(0,-5px);
         }
 
+        .text{
+            margin-left: 5%;
+        }
     </style>
 </head>
 <body>
-    <div class="contain">
-        <div id="sidebar">
-            <ul>
-                <li class="item"><a href="#"><i class="material-icons">call</i></a></li>
-                <li class="item"><a href="#"><i class="material-icons">ac_unit</i></a></li>
-                <li class="item"><a href="#"><i class="material-icons">airplanemode_active</i></a></li>
-                <li class="item"><a href="#"><i class="material-icons">call</i></a></li>
-                <li class="item"><a href="#"><i class="material-icons">directions_bike</i></a></li>
-            </ul>
+<div class="contain">
+    <div class="sidebar">
+        <ul>
+            <li class="item"><a href="#"><i class="material-icons">call</i></a></li>
+            <li class="item"><a href="#"><i class="material-icons">ac_unit</i></a></li>
+            <li class="item"><a href="#"><i class="material-icons">airplanemode_active</i></a></li>
+            <li class="item"><a href="#"><i class="material-icons">call</i></a></li>
+            <li class="item"><a href="#"><i class="material-icons">directions_bike</i></a></li>
+        </ul>
 
-        </div>
-        <div class="ll">
-            <p>
-               Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
-                Accusamus autem debitis dignissimos
-                distinctio fuga nemo nostrum nulla
-                numquam odio veritatis?
-            </p>
-        </div>
     </div>
+    <div class="text">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aliquam atque, dolorum eum, exercitationem ipsam iure magnam nam nostrum
+            officia perspiciatis quod, veritatis. Blanditiis distinctio doloribus
+            excepturi ipsum itaque maiores quae quos recusandae unde veniam? Aperiam
+            beatae blanditiis consectetur consequuntur corporis cum cumque dolor dolore ducimus,
+            esse expedita fugit ipsa ipsam iure maiores neque numquam officia officiis omnis
+            quia reiciendis sequi similique sunt suscipit tempora vel vero voluptas voluptate,
+            voluptatibus voluptatum? A cupiditate dolores ea est ex, inventore quae quam quia
+            quidem reprehenderit, vitae voluptate voluptates! Consequuntur ducimus ea magnam
+            molestiae odit ratione saepe, sapiente sed totam voluptatem. Fugiat, quos sed?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad aut
+            commodi consectetur consequuntur culpa dolor dolore dolores est eveniet exercitationem
+            fuga fugit hic id itaque iure laboriosam maiores modi molestias nam nihil obcaecati officia
+            optio praesentium quibusdam quisquam quo ratione repellat rerum sapiente, sed ullam veniam
+            voluptatibus? Aliquam inventore non, nulla officia quos repellat tempora. Ab aliquid beatae
+            blanditiis cumque dicta doloremque doloribus, ipsum iste iure laborum libero nulla qui
+            repellat repellendus saepe tempora voluptatum? Aut eveniet quaerat sit.
+        </p>
+    </div>
+</div>
 
 </body>
 </html>
