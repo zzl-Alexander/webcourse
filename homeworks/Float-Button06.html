@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .material-icons{
+            font-size: 35px;
+        }
+        .fab{
+            position: fixed;
+            text-align: center;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+        .fab-btn{
+            color: deepskyblue;
+            transition: 0.5s;
+        }
+        .fab:hover .fab-btn{
+            transform: rotate(180deg);
+            transition: 0.5s;
+        }
+        .fab-icon{
+            font-size: 50px;
+        }
+        .fab-menu{
+            display: none;
+            color: deepskyblue;
+        }
+        .fab:hover .fab-menu{
+            display: block;
+            transition: 0.5s;
+        }
+        .fab-menu ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<boby>
+    <div class="fab">
+        <div class="fab-btn">
+            <i class="material-icons fab-icon">account_circle</i>
+        </div>
+        <div class="fab-menu">
+            <ul>
+                <li><i class="material-icons">create</i></li>
+                <li><i class="material-icons">more_horiz</i></li>
+                <li><i class="material-icons" style="color: red">priority_high</i></li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".fab:hover").hover(function (){
+                $(".fab-btn").html("<i class=\"material-icons fab-icon\">remove</i>")
+                $(".fab-menu").fadeIn("slow");
+            })
+            ,(function (){
+                $(".fab-btn").html("<i class=\"material-icons fab-icon\">account_circle</i>")
+                $(".fab-menu").css("display","none")
+            })
+        })
+
+    </script>
+
+</boby>
+
+</html>
