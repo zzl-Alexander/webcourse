@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .modal{
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(170,170,170,0.5);
+            top: 0;
+            display: none;
+        }
+        .modal-dialog{
+            height: 30%;
+            width: 50%;
+            background-color:white;
+            position: relative;
+            left: 25%;
+            top: 50px;
+            /*border: solid #c3c3c3;*/
+            border-radius: 10px;
+            animation: topDown 0.4s; /*自定义动画，从模态框内容上到下出现*/
+        }
+        .modal-header{
+            padding: 10px;
+            font-size: 30px;
+        }
+        .modal-body{
+            padding: 20px;
+            font-size: 20px;
+        }
+        .modal-footer{
+            padding: 10px;
+            font-size: large;
+        }
+        .btngroup{
+            text-align: right;
+            /*padding: 5px;*/
+        }
+        .btn{
+            font-size: 25px;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 8px;
+        }
+        .btn-secondary{
+            background-color: #aaaaaa;
+        }
+        .btn-primary{
+            background-color: #03a9f4;
+        }
+    </style>
+</head>
+<body>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Blanditiis consequuntur eligendi error esse
+            maiores officia perspiciatis quasi, repudiandae tenetur
+            veritatis?Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Accusantium dolorem doloribus explicabo fugiat id minima
+            odio quibusdam quos ratione Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Aliquid architecto assumenda consequatur
+            deleniti deserunt dignissimos enim et illum iure modi nemo
+            nisi nulla numquam, quam ratione rerum vel veniam. Impedit.
+        </div>
+        <button type="button" id="activationbtn" data-target="#Mymodal">
+            点击激活模态框
+        </button>
+        <div class="modal" id="Mymodal">
+            <div class="modal-dialog" id="neimodal">
+
+                    <div class="modal-header">
+                        Modal title
+                    </div>
+
+                    <hr>
+
+                    <div class="modal-body">
+                        Woohoo, you're reading this text in a modal!
+                    </div>
+
+                    <hr>
+
+                    <div class="modal-footer">
+                        <div class="btngroup">
+                            <button type="button" class="btn btn-secondary" id="closeBtn" data-close="#closeModal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function (){
+            $("#activationbtn").click(function (){
+                let i=$(this).data("target");
+                $(i).fadeIn(300);
+                $(i).children("modal-dialog").animate({height:"+=100px"},"slow")
+            })
+            $("#closeBtn").click(function (){
+                let i=$(this).data("close");
+                $("#Mymodal").fadeOut(300);
+                $(i).animate({bottom:"30px"},1500)
+            })
+            $("#Mymodal").click(function (){
+                $("#Mymodal").fadeOut(300);
+            })
+            $("#neimodal").click(function (){
+                return false;
+            })
+        })
+
+    </script>
+</body>
+</html>
